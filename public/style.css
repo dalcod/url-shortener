@@ -1,0 +1,16 @@
+#index h1{
+    text-align: center;
+}
+#index h3{
+    margin-left: 50px;
+}
+.os, .lang, .ip{
+    position: relative;
+    left: 20px;
+}
+.descr{
+    color: red;
+}
+.content{
+    color: green;
+}
