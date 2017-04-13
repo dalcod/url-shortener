@@ -35,7 +35,7 @@ app.get(/^\/(http(s)?\:\/\/)?(w){3}\.[\w]+\.[a-zA-Z]{2,3}$/, function(req, res, 
                     i = numI;
                 }
                 i++;
-                var newUrl = "https://url-shortener14.herokuapp.com/" + i;
+                var newUrl = "localhost:8080/" + i; //"https://url-shortener14.herokuapp.com/" + i
                 var doc = {
                     "short_url": newUrl,
                     "full_url": url
@@ -62,22 +62,21 @@ app.get("/response", function(req, res){
 
         }
     });
-
 })
-app.get("\:num", function(req, res, next){
+app.get("/:num", function(req, res, next){
     var num = req.params.num;
+    
     mongoClient.connect(mUrl, function(err, db){
         if (err) {
             console.log('Unable to connect to the mongoDB server. Error:', err);
         } else {
             console.log("Connection established.");
             db.collection("url").find({
-                "short_url": "https://url-shortener14.herokuapp.com/" + num
+                "short_url": "localhost:8080/" + num //"https://url-shortener14.herokuapp.com/" + num
             }).toArray(function(err, data){
                 res.redirect(data[0].full_url);
                 db.close();
             });
-
         }
     });
 });
