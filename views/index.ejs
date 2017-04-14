@@ -1,5 +1,17 @@
 <% include header %>
 <section id="index">
     <h1>URL shortener</h1>
+    <h2>Example usage:</h2>
+    <p>https://url-shortener14.herokuapp.com/www.google.it</p><br>
+    <p>https://url-shortener14.herokuapp.com/http://www.google.it</p><br>
+    <p>https://url-shortener14.herokuapp.com/https://www.google.it</p><br>
+    <h2>Example output:</h2>
+    <p>{full_url: https://www.google.it, short_url: https://url-shortener14.herokuapp.com/0}</p><br>
+    <p class="note">Note:</p><br>
+    <p class="note">If you don't insert a full url like: "www.google.it" or "http://www.google.it" the program will insert the correct "https://" automatically.</p>
+    <h2>Usage:</h2>
+    <p>https://url-shortener14.herokuapp.com/0</p>
+    <h2>Will redirect to:</h2>
+    <p>www.google.it</p>
 </section>
 <% include footer %>

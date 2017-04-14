@@ -1,16 +1,31 @@
 #index h1{
     text-align: center;
+    font-size: 2em;
 }
-#index h3{
+h2, p{
     margin-left: 50px;
 }
-.os, .lang, .ip{
-    position: relative;
-    left: 20px;
-}
-.descr{
+p{
+    display: inline-block;
+    border: 1px solid red;
     color: red;
+    padding: 5px;
 }
-.content{
-    color: green;
+.note{
+    border: none;
+    color: black;
+    text-decoration: underline;
+}
+
+/* --------------------------- */
+
+#error{
+    color: red;
+    text-align: center;
+}
+#error h1{
+    font-size: 3em;
+}
+#error h2{
+    font-size: 2em;
 }
