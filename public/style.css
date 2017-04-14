@@ -21,7 +21,6 @@
 
 #result p{
     margin-left: 50px;
-    padding: 3px;
 }
 #result .text{
     font-weight: bold;
@@ -30,10 +29,12 @@
     color: green;
 }
 #result .url:hover{
-    cursor: pointer;
     text-decoration: underline;
 }
-
+#result #comma{
+    font-weight: bold;
+    margin-left: 4px;
+}
 /* --------------------------- */
 
 #error{
