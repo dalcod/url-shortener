@@ -15,6 +15,12 @@ app.get("/", function(req, res){
     res.render("index");
 });
 
+mongoClient.connect(mUrl, function(err, db){
+    var collection = db.collection("url");
+    collection.remove({});
+    db.close();
+})
+
 app.get(/^\/(http(s)?\:\/\/)?(w){3}\.[\w]+\.[a-zA-Z]{2,3}$/, function(req, res, next){
     if(/^http:\/\//.test(url) === true || /^https:\/\//.test(url) === false){
         var url = "https://" + req.url.replace(/http:\/\/|\//g, "");
@@ -72,6 +78,7 @@ app.get("/:num", function(req, res, next){
             db.collection("url").find({
                 "short_url": "https://url-shortener14.herokuapp.com/" + num
             }).toArray(function(err, data){
+                console.log(typeof data[0].full_url)
                 res.redirect(data[0].full_url);
                 db.close();
             });
