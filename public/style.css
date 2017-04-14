@@ -19,6 +19,22 @@ p{
 
 /* --------------------------- */
 
+#result p{
+    margin-left: 50px;
+}
+#result .text{
+    font-weight: bold;
+}
+#result .url{
+    color: green;
+}
+#result .url:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* --------------------------- */
+
 #error{
     color: red;
     text-align: center;

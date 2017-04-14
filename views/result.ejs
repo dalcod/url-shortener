@@ -1,8 +1,8 @@
 <% include header %>
     <section id="result">
-        <%= "{" %><br>
-        <%= 'short_url: ' + json.short_url + "," %><br>
-        <%= 'full_url: ' + json.full_url %><br>
-        <%= "}" %>
+        <p><%= "{" %></p><br>
+        <p><span class="text">short_url</span><span class="url"><%= json.short_url%></span><span>,</span></p><br>
+        <p><span class="text">full_url: </span><span class="url"><%= json.full_url %></span></p><br>
+        <p><%= "}" %></p>
     </section>
 <% include footer %>
