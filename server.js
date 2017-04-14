@@ -16,7 +16,7 @@ app.get("/", function(req, res){
 });
 
 app.get(/^\/(http(s)?\:\/\/)?(w){3}\.[\w]+\.[a-zA-Z]{2,3}$/, function(req, res, next){
-    
+    console.log(true)
     if(/^http:\/\//.test(url) === true || /^https:\/\//.test(url) === false){
         var url = "https://" + req.url.replace(/http:\/\/|\//g, "");
         console.log(url)
